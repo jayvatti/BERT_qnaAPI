@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+    <title>NLP qna BERT API</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/qna"> </script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="./BERT_NLP.css">
+    <script src="BERT_qna.js"></script>
+
+</head>
+<body>
+<h1>BERT API qna (NLP)</h1>
+<div class="main">
+    <div class="box1">
+    <h4>Context</h4>
+    <textarea id='context' rows="40" cols="105">
+        Isaac Newton was born on January 4, 1643 in Lincolnshire, England. He was a mathematician, physicist, astronomer, theologian, and alchemist. Newton is widely recognized as one of the most influential scientists of all time and as a key figure in the scientific revolution.
+
+Newton's early life was marked by a lack of formal education, as his primary schooling was limited to a few years at a local grammar school. Despite this, he was able to teach himself mathematics and began to develop his own ideas about the natural world. In 1661, he entered Cambridge University where he would stay for the next 20 years, first as a student and later as a professor.
+
+During his time at Cambridge, Newton began to develop his early theories on calculus, optics, and the laws of motion. In 1665, he was forced to leave Cambridge due to the outbreak of the bubonic plague. He returned to his family home in Lincolnshire, where he spent the next 18 months conducting experiments and making significant advancements in mathematics and optics.
+
+In 1672, Newton was elected as a fellow of the Royal Society, and in 1675, he presented his first paper on calculus, "De analysi per aequationes numero terminorum infinitas," to the society. In 1684, he presented his paper on "Opticks," describing his experiments with light and color.
+
+In 1687, Newton published his most famous work, "Philosophiæ Naturalis Principia Mathematica" (Mathematical Principles of Natural Philosophy), which presented his laws of motion and universal gravitation. This work laid the foundation for modern physics and is considered one of the most important scientific works ever written.
+
+In addition to his work in mathematics and physics, Newton also made important contributions to the field of astronomy. He built the first practical reflecting telescope and used it to study the heavens. He also developed a new method for determining the orbits of planets, which was a significant improvement over previous methods. His work on celestial mechanics, laws of motion and gravity were revolutionary, and he is considered the father of modern physics.
+
+Newton also had a deep interest in alchemy and theology. He believed that his scientific discoveries were evidence of the workings of God in the natural world. He wrote extensively about alchemy and his private papers reveal that he spent a great deal of time studying and experimenting in the field.
+
+In 1696, Newton was appointed Warden of the Royal Mint, a position he held until 1700, when he was appointed Master of the Mint. He was responsible for the recoining of England's currency and made significant improvements in the production process and the design of coins.
+
+In 1705, Newton was knighted by Queen Anne. This was a significant honor, and it marked the first time that a scientist had been knighted for his contributions to knowledge.
+
+In 1713, Newton retired from Cambridge and spent his remaining years working on theological and alchemical studies.
+
+Newton died on March 31, 1727 at the age of 84 in London. He was buried in Westminster Abbey, where he was honored with a memorial stone in the nave.
+
+Isaac Newton's contributions to science and mathematics were immense and far-reaching. His work laid the foundation for modern physics, and his laws of motion and universal gravitation are still considered some of the most important scientific discoveries ever made. His invention of calculus was a major breakthrough and his work on optics and the study of light and color had a significant impact on the field of physics. He was an accomplished alchemist and theologian, and his work in these fields was also groundbreaking. Despite his death in 1727, his work continues to be studied
+    </textarea>
+    </div>
+    <div class="box2">
+        <div>
+            <h4>Prompt:</h4>
+            <input type=text id="prompt" placeholder="Enter your Prompt"> <button id="enter">Enter</button>
+        </div>
+        <h4>Answers:</h4>
+        <div id='answers'></div>
+        <h4>Highest Score:</h4>
+        <div id="highest_score"></div>
+        <h4>Lowest Score:</h4>
+        <div id="lowest_score"></div>
+    </div>
+</div>
+</body>
+</html>
