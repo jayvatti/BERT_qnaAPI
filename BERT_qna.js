@@ -1,5 +1,5 @@
 let enter_button, prompt, div_context, div_answer,highest_score,lowest_score;
-const accBERT_RESULT = (array) => {
+const accBERT_RESULT = (array) => { //highest and lowest from (answers)
     let max = 0, min = 0, max_index = 0, min_index = 0;
     for(let i in array){
         if(array[i]["score"] < max){
@@ -19,13 +19,13 @@ const searchBERT = async () => {
             div_answer.innerHTML =
                 answers.map(answer => `${answer.text} (score = ${answer.score}) (start = ${answer.startIndex}) (end = ${answer.endIndex})` )
                     .join('<br>');
-            try{
+            try{ //to avoid automatic function calls -> when loadPage()
                 accBERT_RESULT(answers);//logging answer with the highest and lowest scores
             }catch(e){}
         });
     })
 };
-const loadPage = () => {
+const loadPage = () => { //load page
     prompt = document.getElementById('prompt');
     div_context = document.getElementById('context');
     enter_button = document.getElementById('enter');
