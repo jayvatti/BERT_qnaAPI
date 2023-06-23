@@ -1,4 +1,4 @@
-# BERT_qnaAPI
+# [BERT_qnaAPI](https://jayvatti.github.io/BERT_qnaAPI/)
 
 This project was built using [TensorFlow's BERT qna API](https://github.com/tensorflow/tfjs-models/tree/master/qna)
 
